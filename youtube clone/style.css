@@ -1,0 +1,515 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* navigation-section css */
+#navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    background-color: white;
+    box-shadow: 0px 1px 3px gray;
+    padding: 0px 2%;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+}
+
+#navbar img {
+    height: 25px;
+    cursor: pointer;
+}
+
+.menu {
+    margin-right: 30px;
+    height: 10px;
+}
+
+.profile-icon {
+    margin-left: 20px;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 9px 15px;
+    border: 1px solid black;
+
+}
+
+.search-btn {
+    padding: 3px 4px;
+    border: 1px solid black;
+
+}
+
+.right img {
+    margin-left: 10px;
+}
+
+.middil {
+    width: 30%;
+    display: flex;
+    align-items: center;
+
+}
+
+/*sidebar-section css*/
+.subhide {
+    display: none;
+}
+
+/*for javascript*/
+.side-bar.small-sidebar {
+    width: 70px;
+}
+
+.side-bar.small-sidebar a p {
+    display: none;
+}
+
+.side-bar.small-sidebar h3 {
+    display: none;
+}
+
+.video-container.bigvideobox {
+    width: calc(100% - 70px);
+    margin-left: 70px;
+}
+
+.filter.bigvideobox {
+    width: calc(100% - 70px);
+    left: 70px;
+}
+
+/*end*/
+
+.side-bar::-webkit-scrollbar {
+    display: none;
+}
+
+.side-bar {
+    width: 250px;
+    background-color: white;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: calc(100% - 60px);
+    display: flex;
+    flex-direction: column;
+    overflow-x: scroll;
+    overflow-x: hidden;
+
+}
+
+.links img {
+    height: 24px;
+    margin-right: 20px;
+}
+
+.links {
+    display: block;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    padding: 10px 13px;
+    border-radius: 10px;
+    margin-top: 8px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.links:hover,
+.links.active {
+    background-color: rgba(0, 0, 0, .1);
+
+}
+
+.sepretor {
+    margin: 20px;
+    width: 100%;
+    margin-left: 0;
+    opacity: .3;
+}
+
+.side-bar .subscribar-section img {
+    border-radius: 50%;
+}
+
+/* filter-section css*/
+.filter {
+    width: calc(100% - 250px);
+    left: 250px;
+    top: 60px;
+    height: 60px;
+    padding: 0px 20px;
+    position: fixed;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+}
+
+.filter::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-option {
+    flex: 0 0 auto;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 50px;
+    border: 1px solid #dbdbdb;
+    background-color: #f0f0f0;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.filter-option.active {
+    background-color: #242424;
+    color: white;
+}
+
+/*video-section css*/
+.video-container {
+    width: calc(100% - 250px);
+    margin-left: 250px;
+    margin-top: 60px;
+    background-color: white;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 15px;
+    overflow-x: hidden;
+    cursor: pointer;
+
+}
+
+.video-container a {
+    text-decoration: none;
+}
+
+.video {
+    min-height: 250px;
+    height: auto;
+    border-radius: 6px;
+}
+
+.video:hover {
+    transform: scale(1.02);
+    overflow: hidden;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.content {
+    height: 100px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+}
+
+.content img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.chanalName {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+/*utility css*/
+.text-white {
+    color: white;
+}
+
+.text-black {
+    color: black;
+}
+
+.py {
+    padding: 10px 13px;
+}
+
+/* utility css end */
+
+
+/* media query */
+@media (max-width: 900px) {
+
+    /* home-page media query */
+    .menu {
+        display: none;
+    }
+
+    .side-bar {
+        display: none;
+    }
+
+    .right .uplode-icon {
+        display: none;
+    }
+
+    .right .notify-icon {
+        display: none;
+    }
+
+    .middil {
+        width: 70%;
+        margin: 0px 10px;
+    }
+
+    .video-container {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .filter {
+        width: 100%;
+        left: 0;
+    }
+}
+
+/* ------------------play video page css--------------- */
+/* playvideo-section */
+.container{
+    padding: 1rem 5rem;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.video-section{
+    flex-basis: 69%;
+}
+.right-sidebar{
+    flex-basis: 30%;
+}
+.video-section video{
+    width: 100%;
+    object-fit: cover;
+}
+/*video navigation*/
+.video-navigatio{
+  display: flex;
+  /* flex-wrap: wrap; */
+  align-items: center;
+  justify-content: space-between;
+  margin: 1rem;
+}
+.video-info .vidoe-title{
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+.video-navigatio .left img{
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+.video-navigatio .left{
+    display: flex;
+    align-items: center;
+    justify-content:start;
+    
+}
+.video-navigatio .middil{
+   width: 100%;
+}
+.video-navigatio .middil .btn{
+    margin-left: 20px;
+}
+.video-navigatio .btn a{
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+}
+.video-navigatio .btn img{
+    width: 18px;
+   padding-right: 3px;     
+}
+.video-navigatio .btn{
+    padding: 0.5rem 0.8rem;
+    border-radius: 20px;
+    margin-right: 0.1rem;
+    border: 1px solid #dbdbdb;
+    /* background-color: #f0f0f0; */
+     background-color: rgba(255, 255, 255, 0.1);
+}
+.video-discriptions{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #dbdbdb;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 10px 10px;
+    cursor: pointer;
+}
+.video-discriptions:hover{
+    background-color: #d7d6d6;
+}
+.video-discriptions h4 {
+    font-size: 14px;
+}
+.video-discriptions p {
+    font-size: 14px;
+}
+.video-discriptions a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.video-discriptions img{
+    width: 20px;
+}
+.conmment-section{
+    margin-top: 20px;
+}
+.conmment-section .comment-box{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+.conmment-section input{
+   margin-left: 10px;
+   border: none;
+   outline: none;
+   border-bottom: 1px solid #bbbaba;;
+   padding: 8px;
+   width: 100%;
+}
+.conmment-section img{
+ width: 40px;
+ border-radius: 50%;
+
+}
+.old-comments{
+    display: flex;
+    align-items: start;
+    margin:30px 0px;
+}
+.old-comments img{
+    margin-right: 20px;
+}
+.old-comments h4{
+    font-size: 14px;
+}
+.old-comments h4 span{
+    font-size: 13px;
+    margin-left: 8px;
+    color: #5a5a5a;
+}
+.old-comments p{
+    font-size: 13px;
+}
+.old-comments .comment-action{
+    display: flex;
+    align-items: center;
+    margin: 8px 0px;
+    font-size: 14px;
+}
+.old-comments .comment-action img{
+    border-radius: 0;
+    width: 20px;
+    margin-right: 5px;
+    
+}
+.old-comments .comment-action span{
+    margin-right: 20px;
+    color: #5a5a5a;
+}
+.old-comments .comment-action a{
+    text-decoration: none;
+}
+
+@media (max-width:900px)
+{
+    .container{
+        padding: 1rem 1rem;
+    }
+    .video-section{
+        flex-basis: 100%;
+    }
+    .old-comments{
+        display: none;
+    }
+    .comment-box{
+        margin-bottom: 20px;
+    }
+    .video-navigatio .right .btn{
+         margin-top: 8px;
+    }
+    .video-navigatio .right{
+        display: flex;
+        justify-content: start;
+        margin-top: 8px;
+        width: 100%;
+        flex-wrap: wrap;
+        
+    }
+    .video-navigatio .left .middil{
+        display: flex;
+        justify-content: end;
+    }
+    
+    .video-navigatio {
+      display: block ;
+    }
+} 
+
+/* ----------------play video section sidebar css------------------ */
+.related-video{
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+.related-video img{
+    width: 100%;
+}
+.related-video .thumbnail{
+    
+    flex-basis: 49%;
+    height: auto;
+}
+.related-video .video-info{
+    flex-basis: 49%;
+}
+.related-video a{
+    text-decoration: none;
+}
+.related-video:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 900px)
+{
+    .container .right-sidebar{
+        flex-basis: 100%;
+    }
+ 
+}
